@@ -26,11 +26,7 @@ jobs:
       run: mvn -B package --file pom.xml
 
     - name: Run Tests and Generate Report
-      run: mvn verify
-
-  - name: Run Tests and Generate Report
-    run: |
-    mvn verify
-    mkdir -p reports
-    cp -R target/surefire-reports/* reports/
-    
+      run: |
+        mvn verify
+        mkdir -p reports
+        cp -R target/surefire-reports/* reports/
