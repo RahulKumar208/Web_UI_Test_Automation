@@ -10,6 +10,13 @@ import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.support.ui.Select;
 import java.io.FileInputStream;
 import java.io.IOException;
+import com.aventstack.extentreports.ExtentReports;
+import com.aventstack.extentreports.ExtentTest;
+import com.aventstack.extentreports.Status;
+import org.testng.annotations.AfterMethod;
+import org.testng.annotations.BeforeMethod;
+import org.testng.annotations.Test;
+
 
 import org.apache.poi.xssf.usermodel.XSSFRow;
 import org.apache.poi.xssf.usermodel.XSSFSheet;
@@ -27,6 +34,28 @@ import Pages.ShippingAddress;
 public class BrowserTest {
 	
 	 static WebDriver driver = null;
+	 ExtentReports extent;
+	    ExtentTest test;
+
+	    @BeforeMethod
+	    public void setup() {
+	        extent = new ExtentReports();
+	        // Additional setup for extent reports, if needed
+	        // ...
+	        test = extent.createTest("Your Test Name");
+	    }
+
+	    @Test
+	    public void yourTestMethod() {
+	        // Your test logic
+	        test.log(Status.PASS, "Test passed");
+	    }
+
+	    @AfterMethod
+	    public void tearDown() {
+	        extent.flush();
+	    }
+	
 	
 	public static void main(String[] args) throws IOException {
 		BasicConfigurator.configure();
