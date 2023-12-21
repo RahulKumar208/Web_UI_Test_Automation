@@ -1,0 +1,10 @@
+DataDrivenTest\ReadingData.class
+Pages\Login.class
+BrowserTest.class
+Pages\ShippingAddress.class
+Pages\AddToCart.class
+Pages\CheckoutPage.class
+Pages\Register.class
+Pages\SearchBox.class
+org\junit\jupiter\api\Test.class
+Pages\PersonalInformationPage.class
