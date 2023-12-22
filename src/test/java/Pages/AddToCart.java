@@ -21,6 +21,13 @@ private static WebElement element = null;
 		return element;
 		
 	}
+	
+	public static WebElement AssertOtherProductAdded(WebDriver driver) {
+		
+		element =	driver.findElement(By.xpath("//tr[descendant::*[text()='Lenovo IdeaCentre 600 All-in-One PC']]"));
+		return element;
+		
+	}
 
 
 }

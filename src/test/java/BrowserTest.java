@@ -30,8 +30,8 @@ import Pages.Register;
 import Pages.SearchBox;
 import Pages.ShippingAddress;
 
-
-public class BrowserTest {
+// Scenario 1: User Signup and Checkout
+public class BrowserTest { 
 	
 	 static WebDriver driver = null;
 	 ExtentReports extent;
@@ -65,7 +65,7 @@ public class BrowserTest {
 		driver.get("https://demo.nopcommerce.com/");
 		driver.manage().window().maximize();
 		
-		FileInputStream file = new FileInputStream("C:\\Users\\pc\\eclipse-workspace\\Book1.xlsx");
+		FileInputStream file = new FileInputStream("C:\\Users\\pc\\eclipse-workspace\\GoogleSearchTests\\Book1.xlsx");
 		XSSFWorkbook workbook = new XSSFWorkbook(file);
 		XSSFSheet sheet = workbook.getSheet("Sheet1");
 		
